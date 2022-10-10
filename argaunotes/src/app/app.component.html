@@ -1,0 +1,35 @@
+<!-- Header section -->
+<header>
+  <div class="top">
+    <div class="top1"> <ng-lottie [options]="options"></ng-lottie></div>
+    <div class="center"><div class="top2"><h1>Les Argonautes</h1></div></div>
+</div>
+</header>
+
+<!-- Main section -->
+  <main>
+    <!-- New member form -->
+    <div class="box">
+      <h1>Ajouter un(e) Argonaute</h1>
+      <form class="new-member-form">
+        <label for="name">Nom de l&apos;Argonaute</label>
+        <input id="name" [formControl]="name" type="text" placeholder="Charalampos" />
+        <button type="submit" (click)="Envoyer()">Envoyer</button>
+      </form>  
+    </div>
+    
+    <!-- Member list -->
+    <div class="box1">
+      <h2>Membres de l'équipage</h2>
+      <div class="box2">
+        <div class="box3">
+          <section class="member-list">
+            <div *ngFor="let item of list" class="member-item">{{item.name}}</div>
+          </section>      
+        </div>
+      </div>
+    </div>
+  </main>  
+<footer>
+  <p>Réalisé par Jason en Anthestérion de l'an 515 avant JC</p>
+</footer>
